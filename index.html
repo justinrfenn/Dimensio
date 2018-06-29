@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+    <script src="dist/main.js"></script>
+		<script>
+			// var scene = new THREE.Scene();
+      // var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+      // var renderer = new THREE.WebGLRenderer();
+      // renderer.setSize( window.innerWidth, window.innerHeight );
+      // document.body.appendChild( renderer.domElement );
+
+      // var raycaster = new THREE.Raycaster();
+      // var mouse = new THREE.Vector2();
+
+      
+      // camera.position.z = 10;
+      
+      // const RADIUS = 2;
+      // const NUM_SPHERES = 10;
+      // const SPHERE_ROW_SIZE = NUM_SPHERES*2*RADIUS;
+      // const SPEED_INCREMENT = 0.1;
+      // const WAIT_TIME = SPHERE_ROW_SIZE/SPEED_INCREMENT;
+
+      // var spheres = getSpheres(NUM_SPHERES);
+      // spheres.forEach(s => scene.add(s));
+      
+      // var stoppedSpheres = [];
+      
+      // function getSpheres(numSpheres){
+      //   var visibleWidth = visibleWidthAtZDepth(camera.position.z, camera);
+      //   var leftEdge = -visibleWidth/4;
+      //   var rightEdge = visibleWidth/4;
+      //   var sphereArray = [];
+      //   for (let i = 0; i < numSpheres; i++) {
+      //     var newXPos = i*RADIUS*2-SPHERE_ROW_SIZE/2-RADIUS;
+      //     sphereArray.push(getSphere(newXPos, i%2 ? 0x5ec3f6 : 0x00ff00));   
+      //   }
+      //   return sphereArray;
+      // }
+
+      // function getSphere(xPos, color){
+      //   var geometry = new THREE.SphereGeometry( RADIUS, 10, 10 );
+      //   var wireframe = new THREE.WireframeGeometry( geometry );
+      //   var material = new THREE.MeshBasicMaterial( { color } );
+      //   var sphere = new THREE.Mesh( geometry, material );
+      //   sphere.position.x = xPos;
+      //   return sphere;
+      // }
+
+      // function moveSphere(sphere){
+      //   var visibleWidth = visibleWidthAtZDepth(camera.position.z, camera);
+        
+      //   var stoppedSphere = stoppedSpheres.find(ss => ss.sphere.uuid === sphere.uuid);
+      //   if(stoppedSphere){
+      //     if(stoppedSphere.wait > 0){
+      //       stoppedSphere.wait--;
+      //       return;
+      //     }else{
+      //       const index = stoppedSpheres.indexOf(stoppedSphere);
+      //       stoppedSpheres.splice(index, 1);
+      //       sphere.position.z -= RADIUS/2;
+      //     }
+      //   }
+
+      //   if(sphere.position.x >= SPHERE_ROW_SIZE/2-SPEED_INCREMENT/4){
+      //     sphere.position.x = -SPHERE_ROW_SIZE/2+SPEED_INCREMENT/4;
+      //   }
+      //   sphere.position.x += SPEED_INCREMENT;
+      // }
+
+      // function getLeftEdge(){
+      //   return 
+      // }
+
+
+      // function visibleHeightAtZDepth( depth, camera ){
+      //   // compensate for cameras not positioned at z=0
+      //   const cameraOffset = camera.position.z;
+      //   if ( depth < cameraOffset ) depth -= cameraOffset;
+      //   else depth += cameraOffset;
+
+      //   // vertical fov in radians
+      //   const vFOV = camera.fov * Math.PI / 180; 
+
+      //   // Math.abs to ensure the result is always positive
+      //   return 2 * Math.tan( vFOV / 2 ) * Math.abs( depth );
+      // };
+
+      // function visibleWidthAtZDepth( depth, camera ){
+      //   const height = visibleHeightAtZDepth( depth, camera );
+      //   return height * camera.aspect;
+      // };
+
+
+
+      // function animate() {
+      //   requestAnimationFrame( animate );
+        
+        
+
+      //   spheres.forEach(moveSphere);
+        
+      //   renderer.render( scene, camera );
+        
+      // }
+
+      // function onMouseClick(event){
+      //   // calculate mouse position in normalized device coordinates
+      //   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+      //   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+        
+        
+      //   // (-1 to +1) for both components
+      //   // update the picking ray with the camera and mouse position
+      //   raycaster.setFromCamera( mouse, camera );
+        
+      //   // calculate objects intersecting the picking ray
+      //   var intersects = raycaster.intersectObjects( scene.children );
+        
+      //   for ( var i = 0; i < intersects.length; i++ ) {
+      //     console.log(intersects[i]);
+      //     var sphere = intersects[i].object;
+      //     if(!stoppedSpheres.find(ss => ss.sphere.uuid === sphere.uuid)){
+      //       sphere.position.z += RADIUS/2;
+      //       stoppedSpheres.push({sphere: sphere, wait: WAIT_TIME})
+      //     }
+
+      //     sphere.material.color.set( 0xff0000 );
+
+      //   }
+
+      // }
+
+      // window.addEventListener( 'click', onMouseClick, false );
+
+      // animate();
+
+      // class Ball{
+        
+      // }
+
+
+
+    </script>
+    <div id="game-screen"></div>
+	</body>
+</html>
