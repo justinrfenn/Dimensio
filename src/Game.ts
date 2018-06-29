@@ -48,8 +48,8 @@ export default class Game {
 
   public Start(){  
     //TODO: have ability to do either depending on browser/touch functionality
-    // window.addEventListener("click", this.onClick.bind(this));
-    window.addEventListener("touchstart", this.onClick.bind(this));
+    window.addEventListener("click", this.onClick.bind(this));
+    // window.addEventListener("touchstart", this.onClick.bind(this));
     this.Animate();
   }
 
